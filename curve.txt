@@ -1,0 +1,31 @@
+#Pseudocode
+
+
+
+inputs: p1, p2, A
+
+check if p1 == p2 or if p1 = O or if p2 = or
+    if p2 is the reflection of p1
+        then p3 = O 
+    if p1 == O 
+        then p3 = p2
+    if p2 == O 
+        then p3 = p1
+    if p1 == p2
+        then p3 = (x3, y3) where
+            m = slopeCalc_same(p1,A)
+            x3 = m**2 - p1[0] - p2[0]
+            y3 = m*(p1[0] - x3) - p1[1]
+    else
+        then = p3 (x3, y3) where
+            m = slopeCalc_diff(p1,p2)
+            x3 = m**2 - p1[0] - p2[0]
+            y3 = m*(p1[0] - x3) - p1[1]
+    return p3
+output: p3
+
+slopeCalc_same(p1,A)
+    return (3*(p1[0]**2) + A) / (2*p1[1])
+
+slopeCalc_diff(p1,p2)
+    return (p2[1] - p1[1]) / (p2[0] - p1[0])
